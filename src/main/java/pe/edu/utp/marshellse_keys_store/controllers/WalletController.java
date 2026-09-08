@@ -6,6 +6,7 @@ import pe.edu.utp.marshellse_keys_store.models.OrdenCompra;
 import pe.edu.utp.marshellse_keys_store.models.UsuarioGamer;
 import pe.edu.utp.marshellse_keys_store.models.Videojuego;
 import pe.edu.utp.marshellse_keys_store.models.LicenciaKey;
+import pe.edu.utp.marshellse_keys_store.models.RecargaRequest;
 import pe.edu.utp.marshellse_keys_store.repositories.OrdenCompraRepository;
 import pe.edu.utp.marshellse_keys_store.repositories.UsuarioGamerRepository;
 import pe.edu.utp.marshellse_keys_store.repositories.VideojuegoRepository;
@@ -41,11 +42,13 @@ public class WalletController {
 
     // Recargar saldo en la billetera
     @PutMapping("/usuarios/{id}/recargar")
-    public ResponseEntity<UsuarioGamer> recargarSaldo(@PathVariable Long id, @RequestBody Double monto) {
-        return usuarioRepo.findById(id).map(usuario -> {
-            usuario.setSaldoWallet(usuario.getSaldoWallet() + monto);
-            return ResponseEntity.ok(usuarioRepo.save(usuario));
-        }).orElse(ResponseEntity.notFound().build());
+    public ResponseEntity<UsuarioGamer> recargarWallet(@PathVariable Long id, @RequestBody RecargaRequest request) {
+        return usuarioRepo.findById(id)
+                .map(usuario -> {
+                    usuario.setSaldoWallet(usuario.getSaldoWallet() + request.getMonto());
+                    return ResponseEntity.ok(usuarioRepo.save(usuario));
+                })
+                .orElse(ResponseEntity.notFound().build());
     }
 
     // Ver historial de compras de un usuario

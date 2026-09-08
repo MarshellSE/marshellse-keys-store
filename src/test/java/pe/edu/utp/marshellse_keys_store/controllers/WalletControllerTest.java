@@ -45,7 +45,7 @@ public class WalletControllerTest {
     public void recargar_Exito_AumentaSaldo() throws Exception {
         mockMvc.perform(put("/api/wallet/usuarios/1/recargar")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content("50.00"))
+                .content("{\"monto\": 50.00}"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.saldoWallet", is(200.00)));
     }
@@ -54,7 +54,7 @@ public class WalletControllerTest {
     public void recargar_Fallo_UsuarioInexistente() throws Exception {
         mockMvc.perform(put("/api/wallet/usuarios/999/recargar")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content("50.00"))
+                .content("{\"monto\": 50.00}"))
                 .andExpect(status().isNotFound());
     }
 

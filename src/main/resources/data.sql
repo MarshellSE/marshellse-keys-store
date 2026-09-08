@@ -7,12 +7,12 @@ VALUES
 INSERT INTO
     videojuego (titulo, desarrollador, precio_base, stock)
 VALUES
-    ('Grand Theft Auto V', 'Rockstar Games', 29.99, 10);
+    ('Grand Theft Auto V', 'Rockstar Games', 29.99, 2);
 
 INSERT INTO
     videojuego (titulo, desarrollador, precio_base, stock)
 VALUES
-    ('Minecraft', 'Mojang', 26.95, 5);
+    ('Minecraft', 'Mojang', 26.95, 1);
 
 INSERT INTO
     videojuego (titulo, desarrollador, precio_base, stock)
@@ -21,7 +21,7 @@ VALUES
         'The Witcher 3: Wild Hunt',
         'CD Projekt',
         39.99,
-        3
+        0
     );
 
 -- Insertando keys asociadas a los juegos
