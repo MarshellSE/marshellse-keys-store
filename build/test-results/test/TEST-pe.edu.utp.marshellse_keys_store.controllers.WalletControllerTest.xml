@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pe.edu.utp.marshellse_keys_store.controllers.WalletControllerTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-09-08T00:45:31.494Z" hostname="codespaces-8de1f0" time="0.414">
+  <properties/>
+  <testcase name="recargar_Exito_AumentaSaldo()" classname="pe.edu.utp.marshellse_keys_store.controllers.WalletControllerTest" time="0.036"/>
+  <testcase name="comprar_Fallo_UsuarioNoExiste()" classname="pe.edu.utp.marshellse_keys_store.controllers.WalletControllerTest" time="0.029"/>
+  <testcase name="comprar_Fallo_JuegoSinStock()" classname="pe.edu.utp.marshellse_keys_store.controllers.WalletControllerTest" time="0.051"/>
+  <testcase name="getUsuario_Exito_RetornaPerfil()" classname="pe.edu.utp.marshellse_keys_store.controllers.WalletControllerTest" time="0.023"/>
+  <testcase name="getUsuario_Fallo_NoEncontrado()" classname="pe.edu.utp.marshellse_keys_store.controllers.WalletControllerTest" time="0.017"/>
+  <testcase name="getHistorial_Exito_DespuesDeCompra()" classname="pe.edu.utp.marshellse_keys_store.controllers.WalletControllerTest" time="0.05"/>
+  <testcase name="getUsuario_Validacion_IdInvalido()" classname="pe.edu.utp.marshellse_keys_store.controllers.WalletControllerTest" time="0.033"/>
+  <testcase name="recargar_Validacion_SinMonto()" classname="pe.edu.utp.marshellse_keys_store.controllers.WalletControllerTest" time="0.021"/>
+  <testcase name="getHistorial_Validacion_IdString()" classname="pe.edu.utp.marshellse_keys_store.controllers.WalletControllerTest" time="0.013"/>
+  <testcase name="comprar_Exito_GeneraOrden()" classname="pe.edu.utp.marshellse_keys_store.controllers.WalletControllerTest" time="0.037"/>
+  <testcase name="recargar_Fallo_UsuarioInexistente()" classname="pe.edu.utp.marshellse_keys_store.controllers.WalletControllerTest" time="0.019"/>
+  <testcase name="getHistorial_Exito_VacioAlInicio()" classname="pe.edu.utp.marshellse_keys_store.controllers.WalletControllerTest" time="0.021"/>
+  <system-out><![CDATA[2026-09-08T00:45:31.498Z  INFO 18654 --- [marshellse-keys-store] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [pe.edu.utp.marshellse_keys_store.controllers.WalletControllerTest]: WalletControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-09-08T00:45:31.506Z  INFO 18654 --- [marshellse-keys-store] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration pe.edu.utp.marshellse_keys_store.MarshellseKeysStoreApplication for test class pe.edu.utp.marshellse_keys_store.controllers.WalletControllerTest
+2026-09-08T00:45:31.778Z  WARN 18654 --- [marshellse-keys-store] [    Test worker] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "IDFalso"]
+2026-09-08T00:45:31.802Z  WARN 18654 --- [marshellse-keys-store] [    Test worker] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<pe.edu.utp.marshellse_keys_store.models.UsuarioGamer> pe.edu.utp.marshellse_keys_store.controllers.WalletController.recargarSaldo(java.lang.Long,java.lang.Double)]
+2026-09-08T00:45:31.818Z  WARN 18654 --- [marshellse-keys-store] [    Test worker] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "uno"]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
